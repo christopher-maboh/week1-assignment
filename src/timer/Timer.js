@@ -1,10 +1,12 @@
-function Timer(seconds) {
+class Timer {
+  constructor(seconds){
   this.seconds = seconds;
+  }
 }
 
-Timer.prototype.start = function () {
-  var instance = this;
-  var timerInterval = setInterval(function () {
+Timer.prototype.start = () =>{
+  let instance;
+  let timerInterval = setInterval(() =>{
     if (instance.seconds === 0) {
       clearInterval(timerInterval);
     }
